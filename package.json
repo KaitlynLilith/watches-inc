@@ -1,0 +1,14 @@
+{
+  "name": "Kaitlyn Lilith",
+  "version": "1.0.0",
+  "description": "Kaitlyn Lilith Watches",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "core-js": "^3.22.8",
+    "parcel": "^2.6.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Imports the CSS for the page -->
+    <link rel="stylesheet" href="styles/universal.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <!-- Imports FontAwesome icon library -->
+    <script
+      src="https://kit.fontawesome.com/5d5f7bf628.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Imports the Javascript for the page -->
+    <!-- <script defer src="scripts/page.js"></script> -->
+    <script defer type="module" src="scripts/controllerMain.js"></script>
+    <!-- <script defer src="scripts/page.js"></script> -->
+
+    <!-- <script defer src="scripts/pageMain.js"></script> -->
+
+    <!-- Icon and Title: Shows up in browser tab -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/gold-logo.png"
+    />
+    <title>Kaitlyn Lilith</title>
+  </head>
+  <body data-watch="main">
+    <!-- Makes an invisible box around everything -->
+    <div id="everythingbox" class="rel flexc fcenter">
+      <div id="insulation" class="rel grid-container">
+        <!-- Side menu -->
+        <!-- On every page -->
+        <!-- Appears over the left side when Menu is clicked -->
+        <nav id="side-menu-box" class="rel flexc modal">
+          <!-- Loaded from JS -->
+        </nav>
+        <!-- Side menu -->
+        <!--  -->
+        <!-- Favorites -->
+        <!-- On every page -->
+        <!-- Appears over the right side when Favourites is clicked -->
+        <!-- Not functional yet -->
+        <div id="favourites-bar-box" class="rel modal">
+          <!-- Loaded from JS -->
+        </div>
+        <!-- Favorites -->
+        <!--  -->
+        <!-- Search bar -->
+        <!-- On every page -->
+        <!-- Appears over the top half of the screen when Search is clicked -->
+        <!-- Not functional yet -->
+        <div id="search-bar-box" class="rel flexc modal">
+          <!-- Loaded from JS -->
+        </div>
+        <!-- Search bar -->
+        <!--  -->
+        <!-- Nav bar -->
+        <!-- On every page -->
+        <!-- Stays at the top, but changes on hover and scroll -->
+        <nav id="nav-bar-box" class="rel flexr fcenter">
+          <!-- Loaded from JS -->
+        </nav>
+        <!-- Nav bar -->
+        <!--  -->
+        <!-- Header -->
+        <!-- Takes up the entire view height -->
+        <!-- Holds a picture or video of featured product -->
+        <header id="hero" class="rel">
+          <!-- Loaded from JS -->
+        </header>
+        <!-- Header -->
+        <!--  -->
+        <!-- Main -->
+        <main class="rel">
+          <!-- Products Section -->
+          <!-- Holds a parade of products in a constant loop -->
+          <section id="product-carousel-box" class="rel section">
+            <!-- Loaded from JS -->
+          </section>
+          <!-- Product Section -->
+          <!--  -->
+          <!-- Company Info Section -->
+          <section id="company-info-name-box" class="rel flexc section">
+            <!-- Loaded from JS -->
+          </section>
+          <!-- Company Info Section -->
+          <!--  -->
+          <!-- Where to Buy Section -->
+          <section id="where-to-buy-box" class="rel section">
+            <!-- Loaded from JS -->
+          </section>
+          <!-- Where to Buy Section -->
+          <!--  -->
+          <!-- Share This Page Section -->
+          <section id="share-this-page-box" class="rel flexc fcenter section">
+            <!-- Loaded from JS -->
+          </section>
+          <!-- Share This Page Section -->
+        </main>
+        <!-- Main -->
+        <!--  -->
+        <!-- Footer -->
+        <!-- On every page -->
+        <footer id="footer" class="rel section">
+          <!-- Loaded from JS -->
+        </footer>
+      </div>
+    </div>
+    <div id="overlay" class=""></div>
+  </body>
+</html>

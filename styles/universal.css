@@ -1,0 +1,1192 @@
+/* DO NOT CHANGE ANYTHING */
+/* This formatting is for all pages */
+
+/* Imports Diplomata SC font at 400 weight  */
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+
+/* Sets universal CSS variables */
+:root {
+  /* Black */
+  --black: #000;
+  /* White  */
+  --white: hsl(0, 0%, 100%);
+  /* Silver */
+  --silver: hsl(210, 0%, 92%);
+  /* Gold image for accent color */
+  --image-mask: "../images/goldbackground.jpg";
+}
+
+/* Makes every element into a box that includes margins and padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* UTILITY CLASSES */
+
+/* Gives elements relative position */
+.rel {
+  position: relative;
+}
+
+/* Makes a flex row */
+.flexr {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Makes a flex column */
+.flexc {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Makes flex elements centered */
+.fcenter {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Makes a grid container */
+.grid-container {
+  display: grid;
+}
+
+/* GENERAL PAGE FORMATTING */
+
+/* Effects all elements */
+html {
+  font-family: sans-serif;
+  font-size: 12px;
+  scroll-behavior: smooth;
+}
+
+/* Effects body elements */
+body {
+  position: relative;
+}
+
+.star-box {
+  position: absolute;
+  top: 5%;
+  right: 7%;
+  z-index: 3;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.star-box.saved {
+  background-color: transparent;
+  background-image: url();
+}
+
+.star-box.saved .stars {
+  font-size: 2rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: var(--white);
+  font-size: 1rem;
+  transition: all 0.5s;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10;
+}
+
+.alink {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.alink:hover {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.alink:active {
+  text-decoration: none;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.word-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.word-link:hover {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+#overlay.show {
+  display: block;
+}
+
+/*  */
+/* PRODUCT SLIDER */
+
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.arrow {
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.container {
+  max-width: 98%;
+  max-height: 100%;
+  display: flex;
+  flex: row;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.container::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 2px;
+  border: 1px solid var(--silver);
+  background-color: var(--silver);
+}
+
+.container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  outline: 1px solid var(--silver);
+}
+
+.thumbnail {
+  width: 25vw;
+  flex: 0 0 auto;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 0.1rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+
+.thumbnail:hover {
+  transform: scale(1);
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.product-details {
+  text-align: center;
+  color: var(--white);
+}
+.product-details h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* SIDE MENU FORMATTING */
+
+.product-box {
+}
+
+.side-link {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+#side-menu-box {
+  display: none;
+  flex-wrap: nowrap;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75vw;
+  height: 100vh;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+}
+
+#side-menu-box.show {
+  display: flex;
+}
+
+#side-menu-insulation {
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#side-menu-insulation::-webkit-scrollbar {
+  display: none;
+}
+
+#side-menu-xbtn-logo-box {
+  align-items: flex-start;
+  font-size: 2rem;
+}
+
+#side-menu-xbtn-box {
+}
+
+#side-menu-logo-box {
+  align-self: center;
+}
+
+#side-menu-logo {
+  width: 20%;
+}
+
+#side-menu-product-slider-box {
+  margin: 1rem 0;
+}
+
+#side-menu-product-box {
+}
+
+#side-menu-pages-links {
+  margin: 1rem 0;
+}
+
+#home {
+}
+
+#all-watches {
+}
+
+#faqs {
+}
+
+#contact-us {
+}
+
+/* FAVOURITES FORMATTING */
+
+.product-box-favs {
+  width: 25vw;
+  padding: 1rem;
+}
+
+.thumbnail-favs {
+  width: 100%;
+}
+
+.thumbnail-image-favs {
+  width: 100%;
+  object-fit: contain;
+}
+
+.product-details-favs {
+  text-align: center;
+  color: var(--white);
+}
+
+#favourites-bar-box {
+  display: none;
+  position: fixed;
+  right: 0;
+  width: 75vw;
+  height: 100vh;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2rem;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+}
+
+#favourites-bar-box.show {
+  display: flex;
+}
+
+#favourites-bar-insulation {
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#favourites-bar-insulation::-webkit-scrollbar {
+  display: none;
+}
+
+#favourites-logo-xbtn-box {
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 2rem;
+}
+
+#favourites-logo-box {
+  width: 80%;
+  align-self: center;
+}
+
+#favourites-logo {
+  width: 20%;
+}
+
+#favourites-xbtn-box {
+}
+
+#favourites-heading-box {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--white);
+}
+
+#favourites-heading {
+}
+
+#favourites-box {
+  width: 100%;
+}
+
+#favourites-holder-text {
+  display: none;
+  height: 40vh;
+  width: 100%;
+}
+
+#favourites-holder-text.show {
+  display: flex;
+}
+
+#holder-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+#favourites-watches {
+  display: flex;
+  flex-direction: row;
+}
+
+#watch-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  font-size: 0.8rem;
+}
+
+.product-box-favs .star-box {
+  position: absolute;
+  top: 10%;
+  right: 13%;
+  z-index: 3;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  transition: all 0.5s;
+}
+
+.product-box-favs .star-box.saved {
+  background-color: transparent;
+  background-image: url();
+}
+
+.product-box-favs .star-box.saved .stars {
+  font-size: 1.5rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.product-box-favs .stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: var(--white);
+  font-size: 0.75rem;
+  transition: all 0.5s;
+}
+
+/* SEARCH BAR FORMATTING */
+
+#search-bar-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 50vh;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+#search-bar-box.show {
+  display: flex;
+}
+
+#search-bar-insulation {
+}
+
+#search-bar-logo-xbtn-box {
+  font-size: 2rem;
+}
+
+#search-bar-logo-box {
+}
+
+#search-bar-logo {
+  align-self: center;
+  width: 15%;
+}
+
+#search-bar-xbtn-box {
+}
+
+#search-bar-heading-box {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--white);
+}
+
+#search-bar-heading {
+}
+
+#search-bar-form-box {
+}
+
+#searchform {
+}
+
+#inputtext {
+}
+
+#search {
+  padding: 0.5rem;
+}
+
+#search-arrow-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+#search-arrow-btn:hover {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+}
+
+#search-arrow-btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#search-arrow-btn:hover i {
+  color: var(--white);
+}
+
+/* NAV BAR FORMATTING */
+
+.nav {
+}
+
+.nav-small {
+}
+
+.nav-medium {
+  display: none;
+}
+
+.nav-large {
+  display: none;
+}
+
+.nav-link {
+  cursor: pointer;
+  color: var(--white);
+}
+
+.nav-i-link {
+  padding-right: 1rem;
+}
+
+.nav-link:hover .nav-i-link {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-link:hover .nav-medium {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav-link:hover .name {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#nav-bar-box {
+  font-family: "Castellar", "Diplomata SC", cursive;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  color: var(--white);
+  padding: 1rem 1rem 0.25rem 1rem;
+  z-index: 5;
+}
+
+#nav-bar-box.show {
+  position: fixed;
+  background-color: var(--black);
+}
+
+#nav-bar-box:hover {
+  background-color: var(--black);
+}
+
+#nav-bar-insulation {
+  width: 100%;
+}
+
+#nav-box {
+  grid-template-rows: minmax(50px, 10%);
+  grid-template-columns: 35% 30% 35%;
+  grid-template-areas: "nav-menu nav-logo nav-favourites";
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 900;
+}
+
+#nav-bar-menu-info-box {
+  grid-area: nav-menu;
+}
+
+#nav-bar-menu-box {
+  margin-right: 1rem;
+}
+#nav-bar-menu-bars-box {
+}
+#nav-bar-info-box {
+}
+#nav-bar-where-box {
+}
+#nav-bar-watches-link {
+  margin-right: 1rem;
+}
+#nav-bar-where-link {
+}
+#nav-bar-icon-name-box {
+  grid-area: nav-logo;
+}
+
+#nav-bar-kaitlyn {
+}
+#nav-bar-logo {
+  width: 3rem;
+  height: auto;
+}
+#nav-bar-lilith {
+}
+#nav-bar-search-favourites-box {
+  grid-area: nav-favourites;
+  justify-content: end;
+  align-items: center;
+}
+
+#nav-bar-search-box {
+}
+
+#nav-bar-search-icon-box {
+}
+
+#nav-bar-search-word-box {
+}
+
+#nav-bar-favourites-box {
+  padding-left: 1rem;
+}
+
+#nav-bar-favourites-box.full .nav {
+  background-image: url(../images/gold-background.jpg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+#nav-bar-favourites-icon-box {
+}
+
+#nav-bar-favourites-word-box {
+}
+
+#nav-bar-breadcrumbs-box {
+}
+
+/* WHERE TO BUY FORMATTING */
+
+#where-to-buy-box {
+  grid-area: where-to-buy;
+  background-color: var(--silver);
+  width: 100vw;
+  padding: 3rem 1rem;
+}
+
+#where-to-buy-insulation {
+}
+
+#where-to-buy-text {
+  padding: 1rem 1rem 3rem 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#where-to-buy-stores {
+  justify-content: space-around;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.store-link {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.store-thumbnail {
+  padding: 0.5rem;
+}
+
+.store-thumbnail i {
+  font-size: 3rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.store-thumbnail:hover {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.store-thumbnail:hover i {
+  font-size: 4rem;
+  color: var(--white);
+}
+
+.store-name {
+  font-weight: 600;
+}
+
+/* SHARE THIS PAGE FORMATTING */
+
+.share-link {
+  margin: 1rem;
+}
+
+.share-icon-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.share-icon-box:hover {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+}
+
+.share-icon-box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.share-icon-box:hover i {
+  color: var(--white);
+}
+
+#share-this-page-box {
+  grid-area: share;
+  width: 100vw;
+  font-size: 1.75rem;
+  padding: 3rem 1rem;
+}
+
+#share-this-page-insulation {
+}
+
+#share-this-page-text {
+  padding-bottom: 1.5rem;
+}
+
+#share-page-icons-box {
+}
+
+#twitter-share-icon-link {
+}
+
+#twitter-share-icon-box {
+}
+
+#facebook-share-icon-link {
+}
+
+#facebook-share-icon-box {
+}
+
+#instagram-share-icon-link {
+}
+
+#instagram-share-icon-box {
+}
+
+#pinterest-share-icon-link {
+}
+
+#pinterest-share-icon-box {
+}
+
+#linkedin-share-icon-link {
+}
+
+#linkedin-share-icon-box {
+}
+
+/* FOOTER FORMATING */
+
+.footer-lists {
+}
+
+.footer-headings {
+  border-bottom: 1px solid var(--white);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  width: 60%;
+  font-size: 1.1rem;
+}
+
+.footer-icon-box {
+}
+
+.footer-icon-box i {
+  margin-right: 0.5rem;
+}
+
+.footer-link {
+}
+
+.footer-link:hover {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#footer {
+  grid-area: footer;
+  background-color: var(--black);
+  color: var(--white);
+  width: 100vw;
+  padding: 2rem;
+  line-height: 1.75;
+}
+
+#footer-insulation {
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  grid-template-areas:
+    "logo logo"
+    "company-info company-info"
+    "pages social"
+    "copyright copyright";
+}
+
+#footer-logo-box {
+  grid-area: logo;
+}
+
+#footer-logo-img {
+  width: 30%;
+}
+
+#footer-company-info-box {
+  grid-area: company-info;
+  text-align: center;
+}
+
+#address-street {
+}
+
+#address-city {
+}
+
+#address-phone {
+}
+
+#address-email {
+}
+
+#footer-list-pages {
+  grid-area: pages;
+}
+
+#footer-pages-heading {
+}
+
+#footer-home-link {
+}
+
+#footer-all-watches-link {
+}
+
+#footer-faqs-link {
+}
+
+#footer-contact-us-link {
+}
+
+#footer-list-social {
+  grid-area: social;
+}
+
+#footer-social-heading {
+}
+
+#twitter-footer-icon-link {
+}
+
+#twitter-footer-icon-box {
+}
+
+#facebook-footer-icon-link {
+}
+
+#facebook-share-icon-box {
+}
+
+#instagram-footer-icon-link {
+}
+
+#instagram-footer-icon-box {
+}
+
+#pinterest-footer-icon-link {
+}
+
+#pinterest-footer-icon-box {
+}
+
+#linkedin-footer-icon-link {
+}
+
+#linkedin-footer-icon-box {
+}
+
+#copyright {
+  grid-area: copyright;
+  text-align: center;
+}
+
+/* RESPONSIVE CSS */
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Changes the rem base */
+  html {
+    font-size: 15px;
+  }
+
+  #side-menu-box {
+    width: 60vw;
+  }
+
+  #favourites-bar-box {
+    width: 60vw;
+  }
+
+  #search-bar-box {
+    height: 75vh;
+  }
+
+  .nav-medium {
+    display: block;
+  }
+
+  .store-thumbnail i {
+    font-size: 4rem;
+  }
+
+  .store-thumbnail:hover i {
+    font-size: 5rem;
+  }
+
+  #where-to-buy-text {
+    font-size: 2.35rem;
+  }
+
+  #footer-insulation {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+      "logo logo logo"
+      "company-info pages social"
+      "copyright copyright copyright";
+  }
+
+  #footer-logo-img {
+    width: 15%;
+  }
+
+  #footer-company-info-box {
+    grid-area: company-info;
+    text-align: left;
+    align-self: center;
+  }
+}
+
+/* Changes settings at 1024px to 1500px screen size */
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+  /* Changes the rem base */
+  html {
+    font-size: 20px;
+  }
+
+  #side-menu-box {
+    width: 50vw;
+  }
+
+  .thumbnail {
+    width: 20vw;
+  }
+
+  #favourites-bar-box {
+    width: 60vw;
+  }
+
+  .product-box-favs {
+    width: 40%;
+  }
+
+  #search-bar-box {
+    height: 60vh;
+  }
+
+  .nav-medium {
+    display: block;
+  }
+
+  .nav-large {
+    display: block;
+  }
+
+  #where-to-buy-text {
+    font-size: 2.35rem;
+  }
+
+  #share-this-page-box {
+    font-size: 2rem;
+  }
+
+  .store-thumbnail i {
+    font-size: 5rem;
+  }
+
+  .store-thumbnail:hover i {
+    font-size: 6rem;
+  }
+
+  #footer-insulation {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+      "logo logo logo"
+      "company-info pages social"
+      "copyright copyright copyright";
+  }
+
+  #footer-logo-img {
+    width: 15%;
+  }
+
+  #footer-company-info-box {
+    grid-area: company-info;
+    text-align: left;
+    align-self: center;
+  }
+}
+
+/* Changes settings at 1501px screen size */
+@media only screen and (min-width: 1501px) {
+  /* Changes the rem base */
+  html {
+    font-size: 25px;
+  }
+
+  #side-menu-box {
+    width: 50vw;
+  }
+
+  .thumbnail {
+    width: 20vw;
+  }
+
+  #favourites-bar-box {
+    width: 60vw;
+  }
+
+  .product-box-favs {
+    width: 40%;
+  }
+
+  .thumbnail-favs {
+    width: 100%;
+  }
+
+  .thumbnail-image-favs {
+    width: 100%;
+  }
+
+  #search-bar-box {
+    height: 60vh;
+  }
+
+  .nav-medium {
+    display: block;
+  }
+
+  .nav-large {
+    display: block;
+  }
+
+  #where-to-buy-text {
+    font-size: 2.35rem;
+  }
+
+  #share-this-page-box {
+    font-size: 2rem;
+  }
+
+  .store-thumbnail i {
+    font-size: 5rem;
+  }
+
+  .store-thumbnail:hover i {
+    font-size: 6rem;
+  }
+
+  #footer-insulation {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+      "logo logo logo"
+      "company-info pages social"
+      "copyright copyright copyright";
+  }
+
+  #footer-logo-img {
+    width: 15%;
+  }
+
+  #footer-company-info-box {
+    grid-area: company-info;
+    text-align: left;
+    align-self: center;
+  }
+}

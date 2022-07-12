@@ -1,0 +1,484 @@
+/* This formatting is for productIndividual page only */
+/* Will not effect other pages */
+
+p {
+  font-size: 1.25rem;
+}
+
+li {
+  font-size: 1.25rem;
+}
+
+#nav-bar-box {
+  background-color: var(--black);
+}
+
+/* Formats the box holding everything */
+#everythingbox {
+  width: 100vw;
+}
+
+#insulation {
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas: "hero" "description" "movement" "science" "where-to-buy" "share" "footer";
+}
+
+#hero {
+  grid-area: hero;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+#hero-insulation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#product-imgs-box {
+  height: 45vh;
+  width: 100%;
+  margin: 5.5rem 0 2rem 0;
+}
+
+#product-imgs-list {
+  width: 25%;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+#product-imgs-list-scroll {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+}
+
+.little-img-box {
+  aspect-ratio: 1 / 1;
+  width: 20vw;
+  height: 20vw;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid var(--silver);
+  margin: 0.5rem auto;
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+
+.little-img-box:hover {
+  transform: scale(1);
+}
+
+.little-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20vw;
+  object-fit: cover;
+}
+
+#big-img-box {
+  width: 75%;
+  height: auto;
+  background-image: url(../images/watch1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#big-img-box .star-box {
+  top: 2%;
+  right: 2%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+#big-img-box .star-box .stars {
+  font-size: 2rem;
+}
+
+#big-img-box .star-box.saved .stars {
+  font-size: 3.5rem;
+}
+
+#hero-info {
+  text-align: center;
+  margin: 2rem;
+}
+
+#hero-name {
+  font-family: "Castellar", "Diplomata SC", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#hero-top-info {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+#hero-price {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#hero-btn {
+  border-radius: 0.5rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  padding: 1rem;
+  transform: scale(0.95);
+  transition: all 0.5s;
+}
+
+#hero-btn:hover {
+  transform: scale(1);
+}
+
+#hero-btn-text {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.section-insulation {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 3rem;
+}
+
+#description-box {
+}
+
+#description-insulation {
+  flex-direction: column-reverse;
+}
+
+#features-tech-box {
+  width: 100%;
+}
+
+#features-box {
+}
+
+#features-heading {
+}
+
+.headings {
+  font-size: 1.5rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--black);
+}
+
+#features-list {
+}
+
+.list {
+  margin-bottom: 1rem;
+}
+
+.fa-li {
+  font-size: 1rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: contain;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.features-li {
+}
+
+#tech-box {
+  width: 100%;
+}
+
+#tech-heading {
+}
+
+#tech-list {
+}
+
+.tech-li {
+}
+
+#desc-box {
+}
+
+.section-headings {
+  font-size: 1.9rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--black);
+}
+
+#desc-heading {
+}
+
+#desc-text {
+  margin-bottom: 1rem;
+}
+
+#movement-box {
+  background-color: var(--silver);
+  width: 100%;
+}
+
+#mov-insulation {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+#mov-box {
+}
+
+#mov-heading {
+}
+
+#mov-text {
+}
+
+#mov-img-box {
+}
+
+.section-img-box {
+}
+
+#mov-img {
+}
+
+.section-img {
+  width: 85%;
+}
+
+#science-box {
+  width: 100%;
+}
+
+#science-insulation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#science-img-box {
+}
+
+#science-img {
+  max-height: 75vh;
+}
+
+#sci-box {
+}
+
+#science-heading {
+}
+
+#science-text {
+}
+
+/* Responsive CSS */
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #hero-insulation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  #product-imgs-box {
+    height: 70vh;
+    width: 60%;
+  }
+
+  #product-imgs-list {
+    width: 20%;
+  }
+
+  #product-imgs-list-scroll {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .little-img-box {
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+  }
+
+  .little-image {
+    width: 10vw;
+  }
+
+  #hero-info {
+    width: 40%;
+  }
+
+  .section {
+    margin-bottom: 5rem;
+  }
+
+  #description-insulation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  #features-tech-box {
+    width: 45%;
+  }
+
+  #desc-box {
+    width: 45%;
+  }
+
+  #mov-insulation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #mov-box {
+    width: 50%;
+  }
+
+  #mov-img-box {
+    width: 50%;
+  }
+
+  .section-img {
+    width: 100%;
+  }
+
+  #science-insulation {
+    flex-direction: row;
+  }
+
+  #science-img-box {
+    width: 50%;
+  }
+
+  #sci-box {
+    width: 50%;
+  }
+}
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+  #hero-insulation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  #product-imgs-box {
+    height: 70vh;
+    width: 60%;
+  }
+
+  #product-imgs-list {
+    width: 20%;
+  }
+
+  #product-imgs-list-scroll {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .little-img-box {
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+  }
+
+  .little-image {
+    width: 10vw;
+  }
+
+  #hero-info {
+    width: 40%;
+  }
+
+  .section {
+    margin-bottom: 5rem;
+  }
+
+  #description-insulation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  #features-tech-box {
+    width: 45%;
+  }
+
+  #desc-box {
+    width: 45%;
+  }
+
+  #mov-insulation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #mov-box {
+    width: 50%;
+  }
+
+  #mov-img-box {
+    width: 50%;
+  }
+
+  .section-img {
+    width: 100%;
+  }
+
+  #science-insulation {
+    flex-direction: row;
+  }
+
+  #science-img-box {
+    width: 50%;
+  }
+
+  #sci-box {
+    width: 50%;
+  }
+}

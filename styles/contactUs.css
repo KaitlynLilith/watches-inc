@@ -1,0 +1,236 @@
+/* This formatting is for Contact Us page only */
+/* Will not effect other pages */
+
+#nav-bar-box {
+  background-color: var(--black);
+}
+
+/* Formats the box holding everything */
+#everythingbox {
+  width: 100vw;
+}
+
+#insulation {
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: "hero" "contact" "company" "where-to-buy" "share" "footer";
+}
+
+#contact-box {
+  grid-area: contact;
+  line-height: 1.5;
+  margin: 5rem 0 2rem 0;
+}
+
+#contact-insulation {
+  width: 100%;
+}
+
+#contact-heading-box {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+#contact-heading {
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#call-email-signup-box {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "call" "email" "notify";
+  width: 100%;
+  padding: 0 2rem;
+}
+
+#call-box {
+  grid-area: call;
+}
+
+.info-box {
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+#call-heading-box {
+}
+
+.heading-box {
+  border-bottom: 1px solid var(--black);
+}
+
+.heading {
+  font-size: 1.75rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#call-heading {
+}
+
+#call-list-box {
+}
+
+.list-box {
+}
+
+#call-list {
+}
+
+.list {
+}
+
+.info-list-li {
+  padding: 0.5rem;
+}
+
+.info-list-li i {
+  font-size: 1rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: contain;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.info-list-text {
+}
+
+.capital {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+#hours {
+}
+
+#hours-list {
+  font-size: 0.85rem;
+  list-style-type: none;
+  padding-left: 0.5rem;
+}
+
+.hours-list-li {
+}
+
+.hours-list-text {
+}
+
+#email-box {
+  grid-area: email;
+}
+
+#email-heading-box {
+}
+
+#email-heading {
+}
+
+#email-list-box {
+}
+
+#email-list {
+}
+
+#signup-box {
+  grid-area: notify;
+}
+
+#signup-box-heading-box {
+}
+
+#signup-box-heading {
+}
+
+#signup-form {
+  margin: 0.5rem 0;
+}
+
+.input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#signup-name {
+}
+
+#signup-email {
+}
+
+#signup-phone {
+}
+
+#signup-submit {
+  background-image: url(../images/gold-background.jpg);
+  background-size: stretch;
+  color: var(--black);
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  font-weight: 900;
+  padding: 1rem 0;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+
+#signup-submit:hover {
+  transform: scale(1);
+  color: var(--white);
+}
+
+#thank-you-box {
+  display: none;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#thank-you-box.show {
+  display: block;
+}
+
+/* Responsive CSS */
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #call-email-signup-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "call notify" "email email";
+    column-gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  #thank-you-box {
+    font-size: 1.7rem;
+  }
+}
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+  #call-email-signup-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "call notify" "email email";
+    column-gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  #thank-you-box {
+    font-size: 1.6rem;
+  }
+}

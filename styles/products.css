@@ -1,0 +1,156 @@
+/* This formatting is for index page only */
+/* Will not effect other pages */
+
+/* Formats the box holding everything */
+#everythingbox {
+  width: 100vw;
+}
+
+#insulation {
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "hero" "products" "where-to-buy" "share" "footer";
+}
+
+#hero {
+  grid-area: hero;
+  height: 100vh;
+  background-image: url(../images/watch8.png);
+  background-color: var(--black);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#header-announcement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Castellar", "Diplomata SC", cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  background-image: url(../images/gold-background.jpg);
+  background-size: stretch;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+#products {
+  grid-area: products;
+}
+
+#products-insulation {
+  width: 100%;
+}
+
+#heading {
+  font-size: 2.25rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#category-diving {
+  background-color: var(--silver);
+}
+
+.category {
+  padding: 1rem 2rem 3rem 2rem;
+}
+
+.c-heading {
+  font-size: 1.75rem;
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 1rem;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: capitalize;
+}
+
+#prod-heading-gmt {
+  text-transform: uppercase;
+}
+
+#diving-box {
+}
+
+.category-box {
+}
+
+.arrow-prod {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+.product-box {
+  width: 40vw;
+}
+
+.thumbnail-prod {
+  width: 100%;
+  flex: 0 0 auto;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 0.1rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+
+.thumbnail-prod:hover {
+  transform: scale(1);
+}
+
+.thumbnail-prod img {
+  width: 100%;
+}
+
+.product-details-prod {
+  text-align: center;
+}
+
+#category-gmt {
+}
+
+#gmt-box {
+}
+
+#category-formal {
+  background-color: var(--silver);
+}
+
+#formal-box {
+}
+
+#category-casual {
+}
+
+#casual-box {
+}
+
+/* Responsive CSS */
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .product-box {
+    width: 30vw;
+  }
+}
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+  .product-box {
+    width: 30vw;
+  }
+}

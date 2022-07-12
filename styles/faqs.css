@@ -1,0 +1,101 @@
+/* This formatting is for FAQs page only */
+/* Will not effect other pages */
+
+#nav-bar-box {
+  background-color: var(--black);
+}
+
+#everythingbox {
+  width: 100vw;
+  line-height: 1.5;
+}
+
+#insulation {
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "faqs" "where-to-buy" "share" "footer";
+}
+
+#faqs-box {
+  grid-area: faqs;
+  padding: 6rem 2rem 3rem 2rem;
+}
+
+#faqs-insulation {
+  width: 100%;
+}
+
+#faqs-heading-box {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#faqs-heading {
+}
+
+.bold {
+  font-weight: 900;
+  background-image: url(../images/gold-background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#faqs-holder {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.faqs {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid var(--black);
+}
+
+.faqs.odd {
+  background-color: var(--silver);
+}
+
+.question-box {
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.question {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.arrow {
+  transform: scaleY(1);
+  width: 1.5rem;
+  transition: all 0.3s;
+}
+
+.arrow.show {
+  transform: scaleY(-1);
+}
+
+.answer-box {
+  display: none;
+  padding: 0.5rem;
+}
+
+.answer-box.show {
+  display: block;
+}
+
+.answer {
+}
+
+/* Responsive CSS */
+
+/* Changes settings at 768px screen size to 1023px screen size*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Changes settings at 1024px screen size */
+@media only screen and (min-width: 1024px) {
+}
